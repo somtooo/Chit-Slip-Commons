@@ -1,4 +1,4 @@
-module github.com/somtooo/Chit-Slip-Commons
+module github.com/somtooo/Chit-Slip-Lib
 
 go 1.16
 
