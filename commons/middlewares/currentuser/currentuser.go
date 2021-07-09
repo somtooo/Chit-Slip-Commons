@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/golang-jwt/jwt"
-	"github.com/somtooo/Chit-Slip-Commons/commons/errors"
+	"github.com/somtooo/Chit-Slip-Lib/commons/errors"
 	"net/http"
 	"os"
 )
