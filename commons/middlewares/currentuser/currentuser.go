@@ -28,7 +28,7 @@ func CurrentUser(handler http.Handler) http.Handler {
 		cookie := req.Cookies()
 		if len(cookie) == 0 {
 			req = req.Clone(ctx)
-			fmt.Println("No cookie was found")
+			fmt.Println("No cookie found")
 			handler.ServeHTTP(res, req)
 			return
 		}
