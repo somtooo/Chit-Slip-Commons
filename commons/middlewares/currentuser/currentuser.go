@@ -33,6 +33,8 @@ func CurrentUser(handler http.Handler) http.Handler {
 			return
 		}
 
+		fmt.Println("This is cookie value", cookie[0].Value)
+
 		token, err := jwt.Parse(cookie[0].Value, func(token *jwt.Token) (interface{}, error) {
 			if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 				return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
