@@ -65,6 +65,8 @@ func RequireAuth(handler http.Handler) http.Handler {
 		if user := req.Context().Value(Key).(user); user.CurrentUser == nil {
 			var notAuthorized errors.BadRequestError = "Not authorized"
 			errors.HTTPError(res, notAuthorized, http.StatusUnauthorized)
+		} else {
+			handler.ServeHTTP(res, req)
 		}
 
 	})
